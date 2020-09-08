@@ -14,13 +14,7 @@ declare(strict_types=1);
 
 namespace Fangx\SyntaxTree;
 
-class ServiceProvider extends \Illuminate\Support\ServiceProvider
+interface NodeGroupInterface extends NodeInterface
 {
-    public function boot()
-    {
-    }
-
-    public function register()
-    {
-    }
+    public function append(NodeInterface $node): self;
 }
